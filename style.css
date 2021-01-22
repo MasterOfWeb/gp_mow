@@ -1,0 +1,261 @@
+/*
+ Theme Name:   MoW
+ Template:     generatepress
+ Version:      0.1
+*/
+
+/* GRID */
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x)/ -2);
+    margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+.row-cols-1>* {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+	.col-md {
+	    flex: 1 0 0%;
+	}
+
+	.col-md-4 {
+			flex: 0 0 auto;
+			width: 33.3333333333%;
+	}
+
+	.row-cols-md-3>* {
+			flex: 0 0 auto;
+			width: 33.3333333333%;
+	}
+}
+
+@media (min-width: 576px) {
+	.col-sm {
+	    flex: 1 0 0%;
+	}
+}
+
+/* COLORS */
+
+header#masthead {
+	border-bottom: 1px solid lightgray
+}
+
+.button {
+  background-color: #259bff !important;
+}
+.border-blue {
+  border-color: #259bff !important;
+}
+
+h2:after, h3:after {
+    background: #259bff;
+}
+
+.border-green{
+  border-color: #70f1b4 !important;
+}
+
+
+/* Typography */
+
+h2, h3 {
+  position: relative;
+}
+h2:after, h3:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 37px;
+}
+h2:after {
+  width: 200px;
+  height: 3px;
+}
+
+h3 {
+  font-size: 30px;
+}
+h3:after {
+  width: 100px;
+  height: 2px;
+}
+
+
+
+/* ULITIES */
+
+.text-center {
+    text-align: center!important;
+}
+
+.h-100 {
+    height: 100%!important;
+}
+
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+
+.mr-10 {
+      margin-right:10px;
+}
+
+.mb-20 {
+      margin-bottom:20px;
+}
+
+.pb-20 {
+      padding-bottom:20px;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+
+/* Cards */
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+}
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+.card-title {
+    margin-bottom: .5rem;
+}
+.card-text:last-child {
+    margin-bottom: 0;
+}
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.card-header {
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.card-footer:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+@media (min-width: 768px) {
+  .top-card {
+    height: calc(100% + 20px) !important;
+    margin-top: -10px;
+    border-width: 3px;
+  }
+}
+
+
+/* MEDIA */
+
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.media-body {
+    -ms-flex: 1;
+    flex: 1;
+}
+.media-body p {
+    margin-bottom: 0px;
+}
+@media (max-width: 576px) {
+	.media img {
+	    max-width: 100px;
+	}
+
+
+/* AAWP */
+.aawp .aawp-product--widget-vertical {
+    border: none;
+}
+.aawp-product__ribbon--sale {
+    background: #E83123;
+}
+.aawp-product__ribbon {
+    text-transform: none;
+}
+.aawp .aawp-product--horizontal .aawp-product__price--old {
+    color: #E83123;
+}
